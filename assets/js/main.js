@@ -25,25 +25,25 @@ function ticketPrice(){
    console.log(carriage)
    console.log(ticketNumber)
 
+      if (userAge === 2){
+            finalPrice = finalPrice - (finalPrice * 20)/100;
+            document.getElementById ('ticketType').innerHTML = `Biglietto minorenni` 
+            document.getElementById ('price').innerHTML = `${finalPrice.toFixed(2)}€`; 
+         
+         } else if (userAge === 3){
+            finalPrice = finalPrice - (finalPrice * 40)/100;
+            document.getElementById ('ticketType').innerHTML = `Biglietto over 65`
+            document.getElementById ('price').innerHTML = `${finalPrice.toFixed(2)}€`;
+         
+         } else{ 
+            document.getElementById ('ticketType').innerHTML = `Biglietto standard`    
+            document.getElementById ('price').innerHTML = `${finalPrice.toFixed(2)}€`;
+         }
 
-   if (userAge == "2"){
-      finalPrice = finalPrice - (finalPrice * 20)/100;
-      document.getElementById ('ticketType').innerHTML = `Biglietto minorenni` 
-      document.getElementById ('price').innerHTML = `${finalPrice.toFixed(2)}€`; 
-   
-   } else if (userAge == "3"){
-      finalPrice = finalPrice - (finalPrice * 40)/100;
-      document.getElementById ('ticketType').innerHTML = `Biglietto over 65`
-      document.getElementById ('price').innerHTML = `${finalPrice.toFixed(2)}€`;
-   
-   } else{ 
-      document.getElementById ('ticketType').innerHTML = `Biglietto standard`    
-      document.getElementById ('price').innerHTML = `${finalPrice.toFixed(2)}€`;
-   }
-
-   document.getElementById('ticketUserName').innerHTML = `${userName}`;
-   document.getElementById('ticketCode').innerHTML = `${ticketNumber}`;
-   document.getElementById('carriage').innerHTML = `${carriage}`;
+         document.getElementById('ticketUserName').innerHTML = `${userName}`;
+         document.getElementById('ticketCode').innerHTML = `${ticketNumber}`;
+         document.getElementById('carriage').innerHTML = `${carriage}`;
+  
    
 }
 

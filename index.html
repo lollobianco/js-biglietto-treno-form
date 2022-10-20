@@ -19,8 +19,8 @@
          <form class="container justify-content-center align-items-center justify-content-around fw-semibold">
             <div class="row justify-content-center align-items-center justify-content-around">
                <div class="mb-3 fs-5 col-3">
-                  <label class="form-label" for="userName">Nome e Cognome</label>
-                  <input type="text" class="form-control" id="userName">
+                  <label class="form-label" for="name">Nome e Cognome</label>
+                  <input type="text" class="form-control" id="name">
                </div>
                <div class="mb-3 fs-5 col-3">
                   <label class="form-label" for="km">Km da percorrere</label>
@@ -29,9 +29,9 @@
                <div class="col-3 mb-3 fs-5">
                   <label class="form-label" for="age">Fascia d'età</label>
                   <select class="form-select-sm fs-5 w-100" aria-label=".form-select-sm example" id="age">
-                     <option selected>Maggiorenne</option>
-                     <option value="1">Minorenne</option>
-                     <option value="2">Over 65</option>                  
+                     <option value="1">Maggiorenne</option>
+                     <option value="2">Minorenne</option>
+                     <option value="3">Over 65</option>                  
                   </select>
                </div>               
             </div>  
@@ -40,7 +40,7 @@
          <form class="container">
             <div class="row justify-content-center align-items-center">
                <div>
-                  <button class="btn mt-5 mx-2 fs-5 fw-semibold" onclick="ticketPrice();return false">Genera</button>
+                  <button class="btn mt-5 mx-2 fs-5 fw-semibold" onclick="ticketPrice(); return false">Genera</button>
                   <button class="btn mt-5 mx-2 fs-5 fw-semibold">Annulla</button>                  
                </div>  
             </div>  
@@ -89,8 +89,7 @@
             
             
          </div> 
-      </div>
-     
+      </div>     
 
    </div>
 

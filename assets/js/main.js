@@ -7,13 +7,17 @@
 
 
 function ticketPrice(){
+
+   let userName = document.getElementById("name").value
    let userKm = parseFloat(document.getElementById("km").value);
    let userAge = parseInt(document.getElementById("age").value);
+ 
    const price = 0.21;
    let finalPrice;
 
+   console.log(userName)
    console.log(userKm)
-   console.log(userAge) 
+   console.log(userAge)
 
    if (userAge < 18){
       finalPrice = (0.21 * userKm);

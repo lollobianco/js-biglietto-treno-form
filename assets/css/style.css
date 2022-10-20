@@ -1,5 +1,24 @@
 body{
    height: 100vh;
-   background-color: #212121;
+   background-color: #B91450;
    color: white;
+}
+
+.form-container{
+   color: #B91450;
+}
+
+.form-container input{
+   border-color: #B91450;
+}
+
+.form-container select{
+   border-color: #B91450;
+   border-radius: 7px;
+}
+
+.form-container button{
+   background-color: #CCCCCC;
+   border-color: #808080;
+   color: #B91450;
 }

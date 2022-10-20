@@ -8,21 +8,90 @@
    <link rel="stylesheet" href="./assets/css/style.css">
    <title>Biglietto treno</title>
 </head>
-<body>
+<body class="vh-100 d-flex align-items-center ">
 
-   <div class="container text-center">
-      <form class="d-flex flex-column justify-content-center vh-100 align-items-center">
-         <div class="mb-3 fs-5 col-12">
-            <label class="form-label" for="km">Quanti chilometri devi fare?</label>
-            <input type="text" class="form-control" id="km">
-         </div>
-         <div class="mb-3 fs-5 col-12">
-            <label class="form-label" for="age">Quanti anni hai?</label>
-            <input type="text" class="form-control" id="age">
-         </div>
-         <button class="btn btn-warning col-6 mb-3 mt-3 fs-5" onclick="ticketPrice();return false">Calcola prezzo biglietto</button>
-         <span class="fs-4 col-6" id="price"></span>
-      </form>  
+   <div class="col-12">
+
+      <h2 class="fw-bold mb-3 text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+
+      <div class="form-container container bg-white rounded-4 p-4 text-center">
+
+         <form class="container justify-content-center align-items-center justify-content-around fw-semibold">
+            <div class="row justify-content-center align-items-center justify-content-around">
+               <div class="mb-3 fs-5 col-3">
+                  <label class="form-label" for="userName">Nome e Cognome</label>
+                  <input type="text" class="form-control" id="userName">
+               </div>
+               <div class="mb-3 fs-5 col-3">
+                  <label class="form-label" for="km">Km da percorrere</label>
+                  <input type="number" class="form-control" id="km">
+               </div>
+               <div class="col-3 mb-3 fs-5">
+                  <label class="form-label" for="age">Fascia d'età</label>
+                  <select class="form-select-sm fs-5 w-100" aria-label=".form-select-sm example" id="age">
+                     <option selected>Maggiorenne</option>
+                     <option value="1">Minorenne</option>
+                     <option value="2">Over 65</option>                  
+                  </select>
+               </div>               
+            </div>  
+         </form>
+
+         <form class="container">
+            <div class="row justify-content-center align-items-center">
+               <div>
+                  <button class="btn mt-5 mx-2 fs-5 fw-semibold" onclick="ticketPrice();return false">Genera</button>
+                  <button class="btn mt-5 mx-2 fs-5 fw-semibold">Annulla</button>                  
+               </div>  
+            </div>  
+         </form> 
+
+      </div>
+
+      <div class="ticket-container">
+         <h2 class="fw-bold mb-3 mt-3 text-center">IL TUO BIGLIETTO</h2>
+
+         <div class="container bg-white text-black fw-semibold p-3">
+
+            <div class="fs-4">DETTAGLIO PASSEGGERI</div>
+
+            
+            <div class="container">
+               <div class="row justify-content-between border border-secondary border-end-0">
+
+                  <div class="fw-bold p-0 col bg-secondary bg-opacity-75 p-3">
+                     <span>NOME PASSEGGERO</span>
+                     <div class="ticketUserName mb-5">Ciccio</div>
+                  </div>
+
+                  <div class="col p-3 d-flex flex-column justify-content-between">
+                     <div>Offerta</div>
+                     <div>ciao</div>
+                  </div>
+
+                  <div class="col p-3 d-flex flex-column justify-content-between">
+                     <div>Offerta</div>
+                     <div>ciao</div>
+                  </div>
+
+                  <div class="col p-3 d-flex flex-column justify-content-between">
+                     <div>Offerta</div>
+                     <div>ciao</div>
+                  </div>
+
+                  <div class="col p-3 d-flex flex-column justify-content-between">
+                     <div>Offerta</div>
+                     <div>ciao</div>
+                  </div>
+
+               </div>
+            </div>
+            
+            
+         </div> 
+      </div>
+     
+
    </div>
 
    

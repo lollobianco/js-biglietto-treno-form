@@ -40,7 +40,7 @@
          <form class="container">
             <div class="row justify-content-center align-items-center">
                <div>
-                  <button class="btn mt-5 mx-2 fs-5 fw-semibold" onclick="ticketPrice(); return false">Genera</button>
+                  <button class="btn mt-5 mx-2 fs-5 fw-semibold" onclick="ticketPrice();return false">Genera</button>
                   <button class="btn mt-5 mx-2 fs-5 fw-semibold">Annulla</button>                  
                </div>  
             </div>  
@@ -53,35 +53,35 @@
 
          <div class="container bg-white text-black fw-semibold p-3">
 
-            <div class="fs-4">DETTAGLIO PASSEGGERI</div>
+            <div class="fs-4 mb-2">DETTAGLIO PASSEGGERI</div>
 
             
             <div class="container">
                <div class="row justify-content-between border border-secondary border-end-0">
 
                   <div class="fw-bold p-0 col bg-secondary bg-opacity-75 p-3">
-                     <span>NOME PASSEGGERO</span>
-                     <div class="ticketUserName mb-5">Ciccio</div>
+                     <span class="fs-5 mb-2">NOME PASSEGGERO</span>
+                     <div class="mb-5 fs-5" id="ticketUserName"></div>
                   </div>
 
                   <div class="col p-3 d-flex flex-column justify-content-between">
                      <div>Offerta</div>
-                     <div>ciao</div>
+                     <div id="ticketType"></div>
                   </div>
 
                   <div class="col p-3 d-flex flex-column justify-content-between">
-                     <div>Offerta</div>
-                     <div>ciao</div>
+                     <div>Carrozza</div>
+                     <div id="carriage"></div>
                   </div>
 
                   <div class="col p-3 d-flex flex-column justify-content-between">
-                     <div>Offerta</div>
-                     <div>ciao</div>
+                     <div>Codice CP</div>
+                     <div id="ticketCode"></div>
                   </div>
 
                   <div class="col p-3 d-flex flex-column justify-content-between">
-                     <div>Offerta</div>
-                     <div>ciao</div>
+                     <div>Costo Biglietto</div>
+                     <div id="price"></div>
                   </div>
 
                </div>

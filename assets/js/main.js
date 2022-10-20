@@ -8,34 +8,42 @@
 
 function ticketPrice(){
 
-   let userName = document.getElementById("name").value
+   let userName = document.getElementById("name").value;
    let userKm = parseFloat(document.getElementById("km").value);
    let userAge = parseInt(document.getElementById("age").value);
- 
+   let finalPrice = 0.21 * userKm;
+   let ticketNumber = Math.floor(Math.random() * 99999) + 1;
+   let carriage = Math.floor(Math.random() * 15) + 1;
+
    const price = 0.21;
-   let finalPrice;
+   
 
    console.log(userName)
    console.log(userKm)
    console.log(userAge)
+   console.log(finalPrice)
+   console.log(carriage)
+   console.log(ticketNumber)
 
-   if (userAge < 18){
-      finalPrice = (0.21 * userKm);
+
+   if (userAge == "2"){
       finalPrice = finalPrice - (finalPrice * 20)/100;
-      document.getElementById ('price').innerHTML = `Il prezzo del tuo biglietto è di ${finalPrice.toFixed(2)}€ (20% di sconto)`; 
-      console.log('prezzo scontato del 20%: ', finalPrice)
+      document.getElementById ('ticketType').innerHTML = `Biglietto minorenni` 
+      document.getElementById ('price').innerHTML = `${finalPrice.toFixed(2)}€`; 
    
-   } else if (userAge > 65){
-      finalPrice = (0.21 * userKm);
+   } else if (userAge == "3"){
       finalPrice = finalPrice - (finalPrice * 40)/100;
-      document.getElementById ('price').innerHTML = `Il prezzo del tuo biglietto è di ${finalPrice.toFixed(2)}€ (40% di sconto)`;
-      console.log('prezzo scontato del 40%: ', finalPrice,'EURO')
+      document.getElementById ('ticketType').innerHTML = `Biglietto over 65`
+      document.getElementById ('price').innerHTML = `${finalPrice.toFixed(2)}€`;
    
-   } else{
-      finalPrice = (0.21 * userKm);
-      document.getElementById ('price').innerHTML = `Il prezzo del tuo biglietto è di ${finalPrice.toFixed(2)}€`;
-      console.log('paghi il prezzo pieno: ', finalPrice,'EURO')
+   } else{ 
+      document.getElementById ('ticketType').innerHTML = `Biglietto standard`    
+      document.getElementById ('price').innerHTML = `${finalPrice.toFixed(2)}€`;
    }
+
+   document.getElementById('ticketUserName').innerHTML = `${userName}`;
+   document.getElementById('ticketCode').innerHTML = `${ticketNumber}`;
+   document.getElementById('carriage').innerHTML = `${carriage}`;
    
 }
 

@@ -5,25 +5,29 @@
 // va applicato uno sconto del 40% per gli over 65.
 // L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
+let buttonData = document.getElementById("inviaDati");
 
-function ticketPrice(){
+
+buttonData.addEventListener('click', function(){
 
    let userName = document.getElementById("name").value;
-   let userKm = parseFloat(document.getElementById("km").value);
-   let userAge = parseInt(document.getElementById("age").value);
+   let userKm = document.getElementById("km").value;
+   let userAge = document.getElementById("age").value;
    let finalPrice = 0.21 * userKm;
    let ticketNumber = Math.floor(Math.random() * 99999) + 1;
    let carriage = Math.floor(Math.random() * 15) + 1;
-
+   
    const price = 0.21;
    
 
-   console.log(userName)
-   console.log(userKm)
-   console.log(userAge)
-   console.log(finalPrice)
-   console.log(carriage)
-   console.log(ticketNumber)
+   console.log(userName, userKm, userAge, carriage, ticketNumber, userAge, finalPrice)
+
+   if (userName == '' || userKm == ''){
+     
+      alert("Devi compilare tutti i campi");
+      console.log('compila tutto!!!')
+
+   } else{
 
       if (userAge === 2){
             finalPrice = finalPrice - (finalPrice * 20)/100;
@@ -43,8 +47,6 @@ function ticketPrice(){
          document.getElementById('ticketUserName').innerHTML = `${userName}`;
          document.getElementById('ticketCode').innerHTML = `${ticketNumber}`;
          document.getElementById('carriage').innerHTML = `${carriage}`;
+   }    
   
-   
-}
-
-
+})
